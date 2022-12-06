@@ -1,32 +1,40 @@
 var questions = [
     {
-        Question1: "",
+        Question1: "what is JavaScript?",
         answers: {
-            a: ""  ,
-            b:  "", 
-            c:  "" ,
-            d: ""  ,
+            a: "does the same as HTML.",
+            b: "is a special mechanism we can find on the web.",
+            c: "is a programming language.",
+            d: "is a language derived from the spanish language",
         },
-        correct: " ",
+        correct: "c",
     },
     {
-        Question2: " ",
+        Question2: "whats a string in Javascript?",
         answers: {
-            a:  "" ,
-            b:  "" ,
-            c: ""  ,
-            d: ""  ,
+            a: "its a way to connect with css",
+            b: "its a way to connect with html",
+            c: "its a way to connect with jQuery ",
+            d: "a string of sequence of one or more characters that may consist of letters, numbers or symbols",
         },
-        correct: " ",
+        correct: "d ",
     },
     {
-        Question3: " ",
+        Question3: "whats is an array in JavaScript? ",
         answers: {
-            a:  ""  ,
-            b:  ""  ,
-            c:   "" ,
-   {,
-    {
-    correct: " ",
-   }
+            a: "used to store multiple values in a single variable. ",
+            b: "a sequence of one or more characters that may consist of letters, numbers or symbols",
+            c: "its a way to connect with jQuery",
+        },
+        correct: "a",
+    }
 ];
+
+// function showQuestions(questions) {
+
+//     var output = []
+//     var answers;
+
+//     for (var i = 0; i < questions.length; i++) {
+
+//         answers = [];

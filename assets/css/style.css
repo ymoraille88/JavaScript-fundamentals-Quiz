@@ -1,5 +1,43 @@
-.wrapper {
-    display: inline-block;
-    /* align-items: center; */
+ h1 {
+    padding: 25px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #45a5d5;
+    color: #ffffff; 
+}
+header p{
+    padding: 40px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #2f55a8;     
+}
+body{
+    padding: 30px;
+    margin: auto;
+    color: brown;
+    background-color: bisque;
+}
+.choices{
+    display: flex;
+   flex-flow: column;
+}
+button{
+    margin: 20px;
+    padding: 10px;
+    background-color: #45a5d5;
+    color: #ffffff;
+    font-size: large;
+    border-radius: 20%;
+    width: 100px;
 
 }
+
+    
+    
+
+
+
+
+
+
+

@@ -8,6 +8,7 @@
 header p{
     padding: 40px;
     text-align: center;
+    font-size: xx-large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #2f55a8;     
 }
@@ -17,11 +18,15 @@ body{
     color: brown;
     background-color: bisque;
 }
-.choices{
+/* .choices{
     display: flex;
    flex-flow: column;
-}
+} */
+
 button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin: 20px;
     padding: 10px;
     background-color: #45a5d5;

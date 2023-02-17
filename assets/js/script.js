@@ -4,12 +4,12 @@ var questionEl = document.querySelector('.question');
 var bodyEl = document.querySelector('.container');
 var resultEl = document.querySelector('.result');
 
-
-
+var position = 0;
+var score = 0;
 
 var questions = [
     {
-        question: "what is JavaScript?",
+        question: "What is JavaScript?",
         answers: [
             "does the same as HTML.",
             "is a special mechanism we can find on the web.",
@@ -18,7 +18,7 @@ var questions = [
 
 
 
-        correct: "is a programming language",
+        correct: "is a programming language.",
     },
     {
         question: "what is a string in Javascript?",
@@ -39,23 +39,43 @@ var questions = [
 
         ],
 
-        correct: "a",
+        correct: "used to store multiple values in a single variable.",
     }
 ];
 
+
+
 var displayQuestion = function () {
-    document.querySelector('.questions').textContent = questions[0].question
+    document.querySelector('.questions').textContent = questions[position].question
+    document.querySelector('.choices').innerHTML = ''
     for (var i = 0; i < 3; i++) {
         var button = document.createElement('button')
-        button.textContent = questions[0].answers[i]
-        button.addEventListener('click', function () {
-        displayQuestion()
-        })
+        button.textContent = questions[position].answers[i]
         document.querySelector('.choices').appendChild(button)
-        
     }
 
 };
+
+document.querySelector('.choices').addEventListener('click', function (event) {
+    const elem = event.target;
+
+    if (elem.matches('button')) {
+        console.log('CLICKED!');
+        var answer = elem.textContent === questions[position].correct
+
+        if (answer){
+            score++;
+        }
+        
+    
+        // check to see if it's correct
+        // score
+        
+        
+        position++;
+        displayQuestion();
+    }
+});
 
 
 displayQuestion();

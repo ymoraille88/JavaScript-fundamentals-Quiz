@@ -3,6 +3,7 @@ var timeEl = document.querySelector('.time');
 var questionEl = document.querySelector('.question');
 var bodyEl = document.querySelector('.container');
 var resultEl = document.querySelector('.result');
+var timeleft = 50;
 
 var position = 0;
 var score = 0;
@@ -48,6 +49,8 @@ var questions = [
 var displayQuestion = function () {
     document.querySelector('.questions').textContent = questions[position].question
     document.querySelector('.choices').innerHTML = ''
+    // document.querySelector('.time').innerHTML = ''
+    timer();
     for (var i = 0; i < 3; i++) {
         var button = document.createElement('button')
         button.textContent = questions[position].answers[i]
@@ -56,11 +59,22 @@ var displayQuestion = function () {
 
 };
 
+function timer () {
+    var interval = setInterval(function(){
+        timeleft--;
+        timeEl.textContent = "time: " + timeleft;
+        if (left === 0 || timeleft < 0) { 
+        timeleft === 0;
+        clearInterval(interval);
+        }
+    });
+}
+
 document.querySelector('.choices').addEventListener('click', function (event) {
     const elem = event.target;
 
     if (elem.matches('button')) {
-        console.log('CLICKED!');
+    
         var answer = elem.textContent === questions[position].correct
 
         if (answer){

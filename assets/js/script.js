@@ -48,7 +48,6 @@ var questions = [
 var displayQuestion = function () {
     document.querySelector('.questions').textContent = questions[position].question
     document.querySelector('.choices').innerHTML = ''
-    // Timer();
     for (var i = 0; i < 3; i++) {
         var button = document.createElement('button')
         button.textContent = questions[position].answers[i]
@@ -57,13 +56,11 @@ var displayQuestion = function () {
 
 };
 
-func
-
 document.querySelector('.choices').addEventListener('click', function (event) {
     const elem = event.target;
 
     if (elem.matches('button')) {
-    
+        console.log('CLICKED!');
         var answer = elem.textContent === questions[position].correct
 
         if (answer){

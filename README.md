@@ -13,7 +13,7 @@ This website is Code quiz that will ask the fundamental question in JavaScript. 
 
 ## Link
 
-[Website] 
+[Website]() 
 
 ## Visuals
-[Homepage]
+[Homepage](../JavaScript-fundamentals-Quiz/assets/images/JavaScript%20fundamental.png)
